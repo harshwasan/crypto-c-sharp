@@ -25,6 +25,7 @@ namespace crypto
 
             if (!IsPostBack)
             {
+                register.Visible = false;
             }
         }
         protected void btn_login_Click(object sender, EventArgs e)
@@ -71,6 +72,18 @@ namespace crypto
 
             }
 
+        }
+
+        protected void btnreg_Click(object sender, EventArgs e)
+        {
+            logindiv.Visible = false;
+            register.Visible = true;
+        }
+
+        protected void havacc_Click(object sender, EventArgs e)
+        {
+            register.Visible = false;
+            logindiv.Visible = true;
         }
     }
 }

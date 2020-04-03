@@ -4,17 +4,45 @@
 
     <div>
         <div>
-            <asp:DropDownList ID="coinlistddl" runat="server"></asp:DropDownList>
-            <asp:Label runat="server" ID="lbl_cost" Text="Notification Limit"></asp:Label>
-            <asp:TextBox runat="server" ID="txt_cost"></asp:TextBox>
-            <asp:Label runat="server" ID="lbl_boughtcost" Text="coin bought at"></asp:Label>
-            <asp:TextBox runat="server" ID="txt_boughtcost"></asp:TextBox>
-            <asp:Label runat="server" Text="Volume" ID="lbl_volume"></asp:Label>
-            <asp:TextBox runat="server" ID="txt_vol"></asp:TextBox>
-            <asp:HiddenField runat="server" ID="hiddenfield" />
-            <asp:Button runat="server" ID="insertusercoin" Text="submit"  Visible="true" OnClick="insertusercoin_Click" />
-            <asp:Button runat="server" ID="updateusercoin" Visible="false" Text="update" OnClick="updateusercoin_Click" />
-             <asp:Button runat="server" ID="reset" Visible="false" Text="reset" OnClick="reset_Click" />
+            <div class="container border border-secondary mt-2" style="display: contents;">
+                <div class="row pl-4 m-4">
+                    
+                    <h3 class="col-lg-6"><span class="name">Add new coins</span></h3>
+                </div>
+                <hr />
+                <br />
+                <div class="row pl-4 m-4">
+                    <div class="col-lg-6">
+                        <asp:Label runat="server" ID="lblcoin" CssClass="form-check-label" Text="Coin Name"></asp:Label>
+
+                        <asp:DropDownList ID="coinlistddl" CssClass="dropdown-header" runat="server"></asp:DropDownList>
+                    </div>
+                    <div class="col-lg-6">
+                        <asp:Label runat="server" ID="lbl_cost" CssClass="form-check-label" Text="Notification Limit"></asp:Label>
+                        <asp:TextBox runat="server" ID="txt_cost" Width="70%" CssClass="form-control"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row pl-4 m-4">
+                    <div class="col-lg-6">
+                        <asp:Label runat="server" ID="lbl_boughtcost" CssClass="form-check-label" Text="Coin Bought At"></asp:Label>
+                        <asp:TextBox runat="server" ID="txt_boughtcost" Width="70%" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="col-lg-6">
+                        <asp:Label runat="server" Text="Volume" CssClass="form-check-label" ID="lbl_volume"></asp:Label>
+                        <asp:TextBox runat="server" ID="txt_vol" Width="70%" CssClass="form-control"></asp:TextBox>
+                    </div>
+                </div>
+                 <div class="row pl-4 m-4">
+
+                <asp:HiddenField runat="server" ID="hiddenfield" />
+                      <div class="col-lg-6">
+                <asp:Button runat="server" ID="insertusercoin" CssClass="btn btn-outline-primary" Text="submit" Visible="true" OnClick="insertusercoin_Click" />
+                <asp:Button runat="server" ID="updateusercoin" CssClass="btn btn-outline-primary" Visible="false" Text="update" OnClick="updateusercoin_Click" />
+                          </div> 
+                     <div class="col-lg-6">
+                   <asp:Button runat="server" ID="reset" CssClass="btn btn-outline-primary" Visible="false" Text="reset" OnClick="reset_Click" />
+                              </div>
+            </div></div>
         </div>
         <style>
             .table-condensed tr th {
@@ -22,10 +50,30 @@
                 background-color: #e9ecef;
                 border-color: #dee2e6
             }
+
+            .hero-section {
+                height: 1500px;
+                padding-top: 260px;
+                display: block;
+                background-image: none !important;
+                background-size: cover;
+                background-color: #f3f7f9;
+                background-position: right top;
+                background-repeat: no-repeat;
+                position: relative;
+            }
         </style>
         <div>
-            <br/><br/><br/>
-
+            <br />
+            <br />
+            <br />
+            <div class="row pl-4 m-4">
+                    
+                    <h3 class="col-lg-6"><span class="name">User Coin Portfolio</span></h3>
+                </div>
+                <hr />
+            <br />
+            <br />
             <div class="responsive-table m-2">
                 <asp:GridView runat="server" class="table table-condensed  " UseAccessibleHeader="true" GridLines="None" ID="gridview" AutoGenerateColumns="False" PageSize="13" OnRowCommand="grd_existingleads_RowCommand">
                     <Columns>
@@ -70,7 +118,7 @@
 
                         <asp:TemplateField HeaderText="Edit">
                             <ItemTemplate>
-                                <asp:Button runat="server" ID="edit" Text="edit" CommandArgument="<%# Container.DataItemIndex %>" />
+                                <asp:Button runat="server" ID="edit" Text="Edit" CssClass="btn btn-outline-primary small" CommandArgument="<%# Container.DataItemIndex %>" />
                                 <%--<asp:Button runat="server" ID="Button1" Text="edit" CommandArgument="<%# Eval("id") %>"  />--%>
                             </ItemTemplate>
 
@@ -80,11 +128,17 @@
                 </asp:GridView>
             </div>
 
-
-            <%--  <div class="col">
+  <br />
+            <br />
+            <br />            <%--  <div class="col">
                 <div class="row" style="padding: 1%">--%>
-
-            <asp:Label class="col-sm-2 col-form-label" runat="server" ID="lbl_welcome"></asp:Label>
+            <div class="row pl-4 m-4">
+                    
+                    <h3 class="col-lg-6"><span class="name">Current Coin Prices</span></h3>
+                </div>
+                <hr />
+            <br />
+            <br />
             <div class="responsive-table m-2">
                 <table id="table" class="table main-table">
 

@@ -13,6 +13,15 @@ namespace crypto {
     public partial class user_tokens {
         
         /// <summary>
+        /// lblcoin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblcoin;
+        
+        /// <summary>
         /// coinlistddl control.
         /// </summary>
         /// <remarks>
@@ -119,14 +128,5 @@ namespace crypto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gridview;
-        
-        /// <summary>
-        /// lbl_welcome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_welcome;
     }
 }

@@ -13,6 +13,15 @@ namespace crypto {
     public partial class login {
         
         /// <summary>
+        /// logindiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logindiv;
+        
+        /// <summary>
         /// lbl_username control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace crypto {
         protected global::System.Web.UI.WebControls.Button btn_login;
         
         /// <summary>
+        /// btnreg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnreg;
+        
+        /// <summary>
         /// lbl_err control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace crypto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_err;
+        
+        /// <summary>
+        /// register control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
         
         /// <summary>
         /// lbl_su_username control.
@@ -121,13 +148,22 @@ namespace crypto {
         protected global::System.Web.UI.WebControls.TextBox txt_su_pass;
         
         /// <summary>
-        /// btn_su control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_su;
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// havacc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button havacc;
         
         /// <summary>
         /// lbl_su_err control.

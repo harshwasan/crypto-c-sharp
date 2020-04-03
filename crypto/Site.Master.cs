@@ -14,6 +14,7 @@ namespace crypto
         {
             if (!IsPostBack)
             {
+                
                 string url = HttpContext.Current.Request.Url.AbsolutePath;
                 obj.checksessions(url);
                 checksessionslogout();
@@ -26,7 +27,7 @@ namespace crypto
             if ( Session["user_name"] == null || Session["user_id"] == null)
             {
                 string url = HttpContext.Current.Request.Url.AbsolutePath;
-                if (url == "~/login.aspx")
+                if (url == "/login")
                 {
                     li_login.Visible = false;
                     btn_login.Visible = false;
@@ -34,13 +35,13 @@ namespace crypto
                 else
                 {
                     li_login.Visible = true;
-                    btn_login.Text = "logout";
+                    btn_login.Text = "Login";
                 }
             }
             else
             {
                 li_login.Visible = true;
-                btn_login.Text = "logout";
+                btn_login.Text = "Logout";
             }
 
 

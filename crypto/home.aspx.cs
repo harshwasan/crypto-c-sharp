@@ -38,7 +38,7 @@ public void checksessionslogout()
         else
         {
             li_login.Visible = true;
-            btn_login.Text = "login";
+            btn_login.Text = "Login";
         }
     }
     else

@@ -205,8 +205,6 @@ function load_token_ticker_data(symbol) {
  * chart
  *
  */
-
-
 function chart(symbol) {
     am4core.ready(function () {
 

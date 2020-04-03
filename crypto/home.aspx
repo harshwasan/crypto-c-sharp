@@ -139,16 +139,20 @@
                     <p>Subscribe for our weekly industry updates, insider perspectives and in-depth market analysis.</p>
                 </div>
                 <div class="col-lg-5 col-md-8 offset-lg-0 offset-md-2">
-                    
-                        <asp:TextBox CssClass="form-control" runat="server" ID="mailtxt" Text="enter your text"></asp:TextBox>
-                      
-                        <asp:button runat="server" ID="mailbtn" OnClick="mailbtn_Click" Text="Get Started"></asp:button>
-                    
+                    <div class="row">
+                        <div class="col">
+                        <asp:TextBox class="form-control" runat="server" ID="mailtxt" Text="enter your text"></asp:TextBox>                      
+                            </div>
+                        <div class="col">
+                        <asp:button runat="server" ID="mailbtn" OnClick="mailbtn_Click" class="site-btn" style="color:black" Text="Get Started"></asp:button>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-    1
+    
 
-        </div>
+       
          
     </section>
     </form>

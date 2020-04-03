@@ -4,34 +4,51 @@
 
 <html lang="en">
 <head runat="server">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/themify-icons.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-   	<style type="text/css">
-		.responsive-table {
-		    display: block;
-		    width: 100%;
-		    overflow-x: auto;
-		    -ms-overflow-style: -ms-autohiding-scrollbar;
-		}
-	    imgs {
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style type="text/css">
+        .responsive-table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+       
+
+        imgs {
             width: 16px;
-            height:16px;
-	    }
-</style>
-    
-   <link href="~/img/favicon_io/favicon.ico" rel="shortcut icon"/>
+            height: 16px;
+        }
+
+        .hero-section {
+            height: auto !important;
+            padding-top: 260px;
+            display: block;
+            background-image: url("../img/hero-bg.png");
+            background-size: cover;
+            background-color: #f3f7f9;
+            background-position: right top;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+    </style>
+
+    <link href="~/img/favicon_io/favicon.ico" rel="shortcut icon" />
 
 </head>
 <body>
-     
+
     <form runat="server">
-        <asp:HiddenField ID="hdn_fld" Value=" "  runat="server"/>
+        <asp:HiddenField ID="hdn_fld" Value=" " runat="server" />
         <asp:ScriptManager runat="server">
             <Scripts>
                 <asp:ScriptReference Name="MsAjaxBundle" />
@@ -48,49 +65,50 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
             </Scripts>
         </asp:ScriptManager>
-       
-<%--        <div id="preloder">
+
+        <%--        <div id="preloder">
 		<div class="loader"></div>
 	</div>--%>
 
-       <header class="header-section clearfix">
-		<div class="container-fluid">
-			<a href="home.aspx" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
-			<a  class="user"><i class="fa fa-bell"></i></a>
-			
-			<nav class="main-menu">
-				<ul class="menu-list">
-					<!-- <li><a href="">Solution</a></li> 
+        <header class="header-section sb-gradients">
+            <div class="container-fluid">
+                <a href="home.aspx" class="site-logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="responsive-bar"><i class="fa fa-bars"></i></div>
+                <a class="user"><i class="fa fa-bell"></i></a>
+
+                <nav class="main-menu">
+                    <ul class="menu-list">
+                        <!-- <li><a href="">Solution</a></li> 
 					<li><a href="">Features</a></li> -->
-					<li><a id="about" href="#">About</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Contact</a></li>
-                      <li id="li_login" class="nav-item" runat="server">
-                            <asp:LinkButton class="nav-link" runat="server" ID="btn_login"  OnClick="btn_logout_Click">Sign-up/login</asp:LinkButton>
+                        <li><a id="home" href="home.aspx"><span style="color: #007bff;">Home</span></a></li>
+                        <li><a style="color: #007bff;" id="about" href="#">About</a></li>
+                        <li><a href="#"><span style="color: #007bff;">News</span></a></li>
+                        <li><a href="#"><span style="color: #007bff;">Contact</span></a></li>
+                        <li id="li_login" class="nav-item" runat="server">
+                            <asp:LinkButton class="nav-link" runat="server" ID="btn_login" Style="color: #007bff;" OnClick="btn_logout_Click">Sign-up/login</asp:LinkButton>
                         </li>
-				</ul>
-			</nav>
-		</div>
-	</header> 
-        	<section class="hero-section">
-               <div class="container body-content">
-            <asp:ContentPlaceHolder ID="Content1" runat="server">
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="hero-section" style="padding-top: 10%;">
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="Content1" runat="server">
+                </asp:ContentPlaceHolder>
 
 
-            </asp:ContentPlaceHolder>
-         
-        </div>
-                </section>
-                 
-        <section id="element_subscribe" style="position:relative" class="newsletter-section gradient-bg">
-		
-		
-	</section>
+
+            </div>
+
+
+        </section>
+
+      <%--  <section id="element_subscribe" class="newsletter-section ">
+        </section>--%>
     </form>
-
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </body>
-  
+
 </html>
